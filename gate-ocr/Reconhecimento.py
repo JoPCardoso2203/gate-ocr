@@ -39,7 +39,8 @@ def tratar_imagens(pasta_origem, pasta_destino='ajeitado'):
     imagem2.save(f'final/{nome_arquivo}')
 
 def MostrarTexto(pasta_origem):
-    pytesseract.pytesseract.tesseract_cmd = "C:\Program Files\Tesseract-OCR\Tesseract.exe"
+    '''Caso esteja no windows, descomentar e colocar caminho do executável do Tessetact-OCR'''
+    '''pytesseract.pytesseract.tesseract_cmd = "C:\Program Files\Tesseract-OCR\Tesseract.exe"'''
     config = r'--oem 3 --psm 11'
     arquivo, tempo = get_latest_file_path(pasta_origem)
     imagem = cv2.imread(arquivo)
